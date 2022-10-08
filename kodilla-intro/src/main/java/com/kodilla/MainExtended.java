@@ -10,6 +10,8 @@ public class MainExtended {
         double yearProduction = 1991 ;
         String motorClass = "chopper" ;
         System.out.println(model);
+        System.out.println(motorType);
+
 
 
 
