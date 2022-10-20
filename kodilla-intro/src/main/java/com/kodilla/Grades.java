@@ -15,5 +15,19 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
+    public int zwrotOceny (){
+        return this.grades[this.size - 1];
+
+    }
+    public double sredniaOcen (){
+        double sumaOcen = 0;
+        for (int i =0; i < this.size;i ++){
+            sumaOcen = sumaOcen+this.grades[i];
+
+
+        }
+        return sumaOcen/this.size;
+
+    }
 }
 
