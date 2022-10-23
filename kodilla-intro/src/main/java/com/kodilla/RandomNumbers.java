@@ -1,14 +1,15 @@
 package com.kodilla;
 
 public class RandomNumbers {
-    int max = 5000;
+    int RandomNumbers = randomNumbers(5000);
+    int Random;
 
-    public int getCountOfRandomNumber(int max) {
+    public int randomNumbers(int max) {
         Random random = new Random();
         int result = 0;
         int sum = 0;
         while (sum < max) {
-            int temp = random.nextInt(10);
+            int temp = random.;
             sum = sum + temp;
             result++;
         }
