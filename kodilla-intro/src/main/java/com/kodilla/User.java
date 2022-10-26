@@ -1,13 +1,13 @@
 package com.kodilla;
 
-public class Uzytkownik {
+public class User{
 
-    String name ;
+    String name;
 
     double age;
     double height;
 
-    public Uzytkownik(String name, double age, double height ) {
+    public User(String name, double age, double height) {
         this.name = name;
         this.age = age;
         this.height = height;
@@ -17,8 +17,7 @@ public class Uzytkownik {
     public void Czlowiek() {
 
 
-
-        if (name != null) ;
+        if (name != null)
         {
             if (age > 30 && height > 160) {
                 System.out.println("user is older than 30 and higher than 160");
@@ -27,5 +26,6 @@ public class Uzytkownik {
 
             }
         }
-
     }
+}
+
