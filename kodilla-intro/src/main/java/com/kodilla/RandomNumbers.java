@@ -15,7 +15,7 @@ public class RandomNumbers {
         int temp = 0;
         this.min = 30;
         this.max = 0;
-        while (sum < maximum) {
+        for (int i = 0;i < maximum; i++) {
             temp = random.nextInt(31);
             sum = sum + temp;
 
@@ -41,6 +41,7 @@ public class RandomNumbers {
         losowanie.losowanie();
         System.out.println("Min: " + losowanie.getMin());
         System.out.println("Max: " + losowanie.getMax());
+        System.out.println();
     }
 }
 
