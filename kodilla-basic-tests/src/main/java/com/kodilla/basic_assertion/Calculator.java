@@ -11,7 +11,7 @@ public class Calculator {
     public int Sub (int a,int b){
         return a-b;
     }
-    public int Square (int a){
+    public double Square (double a){
         return a*a;
     }
 }

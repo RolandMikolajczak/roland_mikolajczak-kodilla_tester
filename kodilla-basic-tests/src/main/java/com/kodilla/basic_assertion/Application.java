@@ -21,7 +21,7 @@ public class Application {
             System.out.println("Metoda sub nie działa poprawnie dla liczb " + a + " i " + b);
         }
 
-        int squereResult= calculator.Square(a);
+        double squereResult= calculator.Square(a);
         boolean correct2 = ResultChecker.assertEquals(25,squereResult);
         if (correct2) {
             System.out.println("Metoda squere działa poprawnie dla liczby " + a);
