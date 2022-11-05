@@ -1,7 +1,7 @@
 package com.kodilla.abstracts.homework;
 
 public class logistyk extends Job{
-    public logistyk(String responbilities, int salary) {
+    public logistyk() {
         super("Kontrola operacji zatowarowania magazynow oraz zachowanie ciaglosci pracy", 7000);
     }
 

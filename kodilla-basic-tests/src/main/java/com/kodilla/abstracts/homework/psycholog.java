@@ -2,7 +2,7 @@ package com.kodilla.abstracts.homework;
 
 public class psycholog extends Job{
 
-    public psycholog(String responbilities, int salary) {
+    public psycholog() {
         super("ocena stanu zdrowiapsychicznego pacjenta", 8000);
     }
 

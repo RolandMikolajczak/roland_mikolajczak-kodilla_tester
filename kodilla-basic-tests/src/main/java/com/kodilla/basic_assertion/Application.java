@@ -22,7 +22,7 @@ public class Application {
         }
 
         double squereResult= calculator.Square(a);
-        boolean correct2 = ResultChecker.assertEquals(25,squereResult);
+        boolean correct2 = ResultChecker.assertEquals(25,squereResult,0.01);
         if (correct2) {
             System.out.println("Metoda squere działa poprawnie dla liczby " + a);
         } else {
