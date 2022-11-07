@@ -7,7 +7,7 @@ public class CarRace {
         Vw vw = new Vw(0);
         doRace(vw);
 
-        Audi audi = new Audi(0);
+        Audi audi = new Audi(10);
         doRace(audi);
 
         Skoda skoda = new Skoda(0);
@@ -16,6 +16,11 @@ public class CarRace {
     }
 
     private static void doRace(Car car) {
-        System.out.println(car.increaseSpeed() + car.increaseSpeed() + car.increaseSpeed() + car.decreaseSpeed() + car.decreaseSpeed()+ car.getSpeed());
-    }
+        car.increaseSpeed();
+        car.increaseSpeed();
+        car.increaseSpeed();
+        car.decreaseSpeed();
+        car.decreaseSpeed();
+        System.out.println(car.getSpeed());
+        }
 }

@@ -14,12 +14,12 @@ public class Skoda implements Car{
     }
 
     @Override
-    public int increaseSpeed() {
-        return speed +19;
+    public void increaseSpeed() {
+        speed += +19;
     }
 
     @Override
-    public int decreaseSpeed() {
-        return speed - 21;
+    public void decreaseSpeed() {
+        speed+= - 21;
     }
 }

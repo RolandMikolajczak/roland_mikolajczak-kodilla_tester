@@ -15,14 +15,14 @@ public class Audi implements Car{
     }
 
     @Override
-    public int increaseSpeed() {
-        return speed+25;
+    public void increaseSpeed() {
+         speed += 25;
 
     }
 
     @Override
-    public int decreaseSpeed() {
-        return speed-20;
+    public void decreaseSpeed() {
+        speed+=-20;
 
     }
 }
