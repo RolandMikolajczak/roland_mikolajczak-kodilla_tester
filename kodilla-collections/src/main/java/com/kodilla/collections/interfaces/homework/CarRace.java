@@ -7,7 +7,7 @@ public class CarRace {
         Vw vw = new Vw(0);
         doRace(vw);
 
-        Audi audi = new Audi(10);
+        Audi audi = new Audi(0);
         doRace(audi);
 
         Skoda skoda = new Skoda(0);
