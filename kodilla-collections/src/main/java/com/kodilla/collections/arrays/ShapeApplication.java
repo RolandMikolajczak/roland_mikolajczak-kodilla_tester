@@ -11,9 +11,9 @@ public class ShapeApplication {
 
     private static final Random RANDOM = new Random();
     public static void main(String[] args) {
-        Shape[] shapes = new Shape[5];
-        int n;
-        for (n = 0; n < shapes.length; n++) ;
+        Random random = new Random();
+        Shape[] shapes = new Shape[random.nextInt(20)+1];
+        for (int n = 0; n < shapes.length; n++)
         shapes[n] = drawShape();
         for (Shape shape : shapes)
             ShapeUtilis.displayShapeInfo(shape);
