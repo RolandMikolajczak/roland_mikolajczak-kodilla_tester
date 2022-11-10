@@ -9,6 +9,13 @@ public class Skoda implements Car{
     }
 
     @Override
+    public String toString() {
+        return "Skoda{" +
+                "speed=" + speed +
+                '}';
+    }
+
+    @Override
     public int getSpeed() {
         return speed;
     }
