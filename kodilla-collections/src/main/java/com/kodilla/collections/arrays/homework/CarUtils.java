@@ -9,7 +9,7 @@ import com.kodilla.collections.interfaces.homework.Car;
 import com.kodilla.collections.interfaces.homework.Skoda;
 import com.kodilla.collections.interfaces.homework.Vw;
 
-public class CarUtils implements Car {
+public class CarUtils {
     public static void describeCar(Car car){
         System.out.println("..................................");
         System.out.println("This is :" + getCarName(car));
@@ -29,18 +29,5 @@ public class CarUtils implements Car {
             return "Unknown car model";
     }
 
-    @Override
-    public int getSpeed() {
-        return 0;
-    }
 
-    @Override
-    public void increaseSpeed() {
-
-    }
-
-    @Override
-    public void decreaseSpeed() {
-
-    }
 }

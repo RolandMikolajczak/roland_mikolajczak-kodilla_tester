@@ -26,6 +26,7 @@ public class CarsListApplication {
 
 
         for (Car cars2022 : cars) {
+
             System.out.println(cars2022 + " " + cars2022.getSpeed());
 
 
