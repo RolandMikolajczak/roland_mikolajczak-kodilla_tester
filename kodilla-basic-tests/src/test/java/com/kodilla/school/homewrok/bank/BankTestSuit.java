@@ -16,8 +16,8 @@ public class BankTestSuit {
         cashMachine1.addTransaction(-50);
         cashMachine1.addTransaction(-20);
         cashMachine1.addTransaction(1000);
-        bank.addCashMachine(cashMachine);
-        bank.addCashMachine(cashMachine1);
+        bank.add(cashMachine);
+        bank.add(cashMachine1);
         double balance = bank.getBalance();
         Assertions.assertEquals(1030, balance, 0.01);
 
@@ -33,8 +33,8 @@ public class BankTestSuit {
         cashMachine1.addTransaction(-50);
         cashMachine1.addTransaction(-20);
         cashMachine1.addTransaction(1000);
-        bank.addCashMachine(cashMachine);
-        bank.addCashMachine(cashMachine1);
+        bank.add(cashMachine);
+        bank.add(cashMachine1);
         int incomes = bank.getNumberOfIncomes();
         Assertions.assertEquals(2, incomes);
     }
@@ -49,8 +49,8 @@ public class BankTestSuit {
         cashMachine1.addTransaction(-50);
         cashMachine1.addTransaction(-20);
         cashMachine1.addTransaction(1000);
-        bank.addCashMachine(cashMachine);
-        bank.addCashMachine(cashMachine1);
+        bank.add(cashMachine);
+        bank.add(cashMachine1);
         int withdraws = bank.getNumberOfWithdraws();
         Assertions.assertEquals(2, withdraws);
     }
@@ -63,8 +63,8 @@ public class BankTestSuit {
         cashMachine1.addTransaction(-50);
         cashMachine1.addTransaction(-20);
         cashMachine1.addTransaction(1000);
-        bank.addCashMachine(cashMachine);
-        bank.addCashMachine(cashMachine1);
+        bank.add(cashMachine);
+        bank.add(cashMachine1);
 
         Assertions.assertEquals(550,bank.averageOfIncomes());
     }
@@ -77,8 +77,8 @@ public class BankTestSuit {
         cashMachine1.addTransaction(-50);
         cashMachine1.addTransaction(-20);
         cashMachine1.addTransaction(1000);
-        bank.addCashMachine(cashMachine);
-        bank.addCashMachine(cashMachine1);
+        bank.add(cashMachine);
+        bank.add(cashMachine1);
 
         Assertions.assertEquals(35, bank.averageOfWithdraws());
     }

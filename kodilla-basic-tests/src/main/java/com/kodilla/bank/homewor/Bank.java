@@ -1,45 +1,60 @@
 package com.kodilla.bank.homewor;
 
 public class Bank {
-    private int[] values;
+    private CashMachine[] values;
     private int size;
 
+
     public Bank() {
-        this.values = new int[0];
+        this.values = new CashMachine[0];
         this.size = 0;
     }
 
 
     public double getBalance() {
-        return 0;
+        int sum = 0;
+        for (CashMachine bankomat : values) {
+            sum += bankomat.getBalance();
+        }
+        return sum;
     }
 
-    public void add(int value) {
+    public void add(CashMachine value) {
         this.size++;
-        int[] newTab = new int[this.size];
+        CashMachine[] newTab = new CashMachine[this.size];
         System.arraycopy(values, 0, newTab, 0, values.length);
         newTab[this.size - 1] = value;
         this.values = newTab;
     }
 
-    public void addCashMachine(CashMachine machine) {
-
-    }
-
     public int getNumberOfIncomes() {
-        return 0;
+        int incomes = 0;
+        for (CashMachine bankomat : values) {
+            incomes += bankomat.getNumberIncomes();
+        }
+        return incomes;
     }
 
     public int getNumberOfWithdraws() {
-        return 0;
+        int withdraws = 0;
+        for (CashMachine bankomat : values) {
+            withdraws += bankomat.getNumberWithdraws();
+        }
+        return withdraws;
     }
 
     public double averageOfIncomes() {
-        return 0;
+        double average = 0;
+        for (CashMachine bankomat : values) {
+            average += bankomat.getAverageIncomes();
+        }
+
+        return average;
     }
 
     public double averageOfWithdraws() {
         return 0;
     }
 }
+
 

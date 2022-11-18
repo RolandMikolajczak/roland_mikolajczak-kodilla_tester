@@ -1,31 +1,65 @@
 package com.kodilla.bank.homewor;
 
 public class CashMachine {
+    int[] transactions = new int[0];
+    int transactionCount = 0;
 
-    private Bank incomes;
 
-    private Bank withdraws;
-
-    public CashMachine(){
-        this.incomes = new Bank();
-        this.withdraws = new Bank();
-
+    public CashMachine() {
     }
+
+    public int getBalance(){
+        int balance= 0;
+      for (int tx: transactions){
+          balance+=tx;
+
+      }
+      return balance;
+    }
+
     public double getAverage() {
-        double sum = this.incomes.getBalance();
-        return sum / (incomes + withdraws);
-    }
-    public double getIncomesAverage() {
-        return this.incomes.averageOfIncomes();
+        return 0;
     }
 
-    public void addTransaction(int incomes){
-        if (incomes>0){
-            this.incomes.add(incomes);}
-            else{
-                this.withdraws.add(incomes);
+    public int getNumberIncomes(){
+        int incomes = 0;
+        for (int tx : transactions) {
+            if (tx > 0) {
+                incomes++;
             }
         }
+        return incomes;
+    }
+    public double getAverageIncomes(){
+        double value = 0;
+        for (int i = 0; i < this.transactions.length; i++){
+            if (i>0){
+                value += this.transactions[i];
+            }
+        }
+        return value;
+    }
+    public int getNumberWithdraws(){
+        int withdraws = 0;
+        for (int tx : transactions) {
+            if (tx < 0) {
+                withdraws++;
+            }
+        }
+            return withdraws;
 
     }
+
+    public double getIncomesAverage() {
+        return 0;
+    }
+
+    public void addTransaction(int incomes) {
+        transactionCount++;
+        int[] transactionList = new int[transactionCount];
+        System.arraycopy(transactions, 0, transactionList, 0, transactions.length);
+        transactionList[transactionCount - 1] = incomes;
+        transactions = transactionList;
+    }
+}
 
