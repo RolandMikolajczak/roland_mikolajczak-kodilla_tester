@@ -30,6 +30,16 @@ public class CashMachine {
         }
         return incomes;
     }
+    public int getSumIncomes(){
+        int incomes = 0;
+        for (int tx : transactions) {
+            if (tx > 0) {
+                incomes+=tx;
+            }
+        }
+        return incomes;
+    }
+
     public double getAverageIncomes(){
         double value = 0;
         for (int i = 0; i < this.transactions.length; i++){
@@ -48,6 +58,15 @@ public class CashMachine {
         }
             return withdraws;
 
+    }
+    public int getSumWithdraws(){
+        int sumWithdraws = 0;
+        for (int tx : transactions) {
+            if (tx < 0) {
+                sumWithdraws+=tx;
+            }
+        }
+        return sumWithdraws*-1;
     }
 
     public double getIncomesAverage() {

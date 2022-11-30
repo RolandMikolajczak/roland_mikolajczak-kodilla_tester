@@ -5,4 +5,5 @@ findProject(':kodilla-intro:zmienna')?.name = 'zmienna'
 include 'kodilla-basic-tests'
 include 'kodilla-collections'
 include 'kodilla-collections-advanced'
+include 'kodilla-stream'
 

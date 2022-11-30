@@ -34,6 +34,13 @@ public class Bank {
         }
         return incomes;
     }
+    public int getSumOfIncomes(){
+        int sumIncomes = 0;
+        for (CashMachine bankomat : values){
+            sumIncomes += bankomat.getSumIncomes();
+        }
+        return sumIncomes;
+    }
 
     public int getNumberOfWithdraws() {
         int withdraws = 0;
@@ -43,18 +50,23 @@ public class Bank {
         return withdraws;
     }
 
-    public double averageOfIncomes() {
-        double average = 0;
-        for (CashMachine bankomat : values) {
-            average += bankomat.getAverageIncomes();
+    public int getSumOfWithdraws(){
+        int sumWithdraws = 0;
+        for (CashMachine bankomat : values){
+            sumWithdraws += bankomat.getSumWithdraws();
         }
-
-        return average;
+        return sumWithdraws;
     }
 
+
+    public double averageOfIncomes() {
+        return getSumOfIncomes()/(double)getNumberOfIncomes();
+    }
     public double averageOfWithdraws() {
-        return 0;
+        return getSumOfWithdraws()/(double)getNumberOfWithdraws();
     }
+
+
 }
 
 

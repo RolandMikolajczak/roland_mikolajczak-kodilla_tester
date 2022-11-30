@@ -27,8 +27,8 @@ public class CalculatorTestSuite {
     public void testSquere(){
         Calculator calculator = new Calculator();
         double a = 5;
-        BigDecimal c = new BigDecimal (String.format("%.2f", a * a));
+//        BigDecimal c = new BigDecimal (String.format("%.2f", a * a));
         double sqrResult = calculator.Square(a);
-        assertEquals(25,sqrResult, String.valueOf(c));
+        assertEquals(25,sqrResult, 0.01);
     }
 }
