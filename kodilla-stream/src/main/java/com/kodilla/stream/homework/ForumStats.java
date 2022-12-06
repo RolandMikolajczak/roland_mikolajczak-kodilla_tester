@@ -12,6 +12,7 @@ public class ForumStats {
     public static void main(String[] args) {
         System.out.println(returnAverageCountOfPostsOver40(UsersRepository.getUsersList()));
         System.out.println(returnAverageCountOfPostsBelow40(UsersRepository.getUsersList()));
+        System.out.println("chyba dziala");
     }
     public static double returnAverageCountOfPostsOver40(List<User> users){
         double average = users

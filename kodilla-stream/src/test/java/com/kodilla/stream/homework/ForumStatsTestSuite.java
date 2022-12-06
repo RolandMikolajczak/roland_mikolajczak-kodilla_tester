@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ForumStatsTestSuite {
     @Test
-    public void shouldReturnAverageCountOfPostsForOver40 (){
+    public void shouldReturnAverageOfPostsForOver40 (){
         ForumStats average = new ForumStats();
         List<User> users = new ArrayList<>();
         users.add(new User("Roland",45,200,"Pilkarz"));
@@ -19,7 +19,7 @@ public class ForumStatsTestSuite {
         assertEquals(150,result,0.01);
     }
     @Test
-    public void shouldNotIncludeAverageCountOfPostsForOver40 (){
+    public void shouldNotIncludeAverageOfPostsForOver40 (){
         ForumStats average = new ForumStats();
         List<User> users = new ArrayList<>();
         users.add(new User("Roland",45,200,"Pilkarz"));
@@ -34,5 +34,5 @@ public class ForumStatsTestSuite {
         double result = average.returnAverageCountOfPostsBelow40(users);
         assertEquals(0.0,result,0.01);
     }
-    
+
 }
