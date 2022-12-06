@@ -10,9 +10,10 @@ public class UserManager {
         List<String> chemistGroupUsernamesAge = filterChemistGroupUsernamesAge(45);
         List<String> chemistGroupUsernames = filterChemistGroupUsernames();
         System.out.println(chemistGroupUsernames);
+        System.out.println(chemistGroupUsernamesAge);
     }
     public static List<String> filterChemistGroupUsernames() {
-            List<String> usernames = UsersRepository.getUsersList()   // [1]
+            List<String> usernames = UsersRepository.getUsersList()
                     .stream()
                     .filter(user -> user.getGroup().equals("Chemists"))
                     .map(UserManager::getUserName)
@@ -20,7 +21,7 @@ public class UserManager {
             return usernames;
     }
     public static List<String> filterChemistGroupUsernamesAge(int age) {
-        List<String> usernames = UsersRepository.getUsersList()   // [1]
+        List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getGroup().equals("Chemists"))
                 .filter(user -> user.getAge() > age)
