@@ -1,5 +1,7 @@
 package com.kodilla.parametrized_tests;
 
+import java.util.stream.Stream;
+
 public class StringManipulator {
     public String reverseWithLowerCase(String input){
         StringBuilder builder = new StringBuilder(input);
@@ -13,4 +15,6 @@ public class StringManipulator {
         int count = text.length() - text.replace(",", "").length();
         return count;
     }
-}
+
+    }
+
