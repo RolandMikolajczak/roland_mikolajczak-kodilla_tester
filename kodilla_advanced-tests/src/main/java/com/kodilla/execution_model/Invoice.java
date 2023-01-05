@@ -7,6 +7,7 @@ public class Invoice {
     private List<Item> items = new ArrayList<>();
 
     public void addItem(Item item) {
+
         this.items.add(item);
     }
 
