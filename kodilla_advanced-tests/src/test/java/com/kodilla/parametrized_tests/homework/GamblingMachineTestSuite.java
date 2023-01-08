@@ -23,7 +23,7 @@ class GamblingMachineTestSuite {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/Numbers.CSV")
+    @CsvFileSource(resources = "/numbers.csv")
     public void ShouldThrowExceptionIfNumberIsOutOfRange(String input) {
         Set<Integer> number = convertStringToIntegerSet(input);
         GamblingMachine gamblingMachine = new GamblingMachine();
@@ -31,7 +31,7 @@ class GamblingMachineTestSuite {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/CorrectNumbers.CSV")
+    @CsvFileSource(resources = "/CorrectNumbers.csv")
     public void ShouldReturnWinsIfInputIsCorrect(String input) throws InvalidNumbersException {
         Set<Integer> number = convertStringToIntegerSet(input);
         GamblingMachine gamblingMachine = new GamblingMachine();

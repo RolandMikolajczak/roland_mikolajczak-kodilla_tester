@@ -20,7 +20,7 @@ public class ForumStats {
                 .filter(user -> user.getAge()>=40)
                 .mapToInt(user -> user.getNumberOfPost())
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
 
         return average;
     }
@@ -30,7 +30,7 @@ public class ForumStats {
                 .filter(user -> user.getAge()<40)
                 .mapToInt(user -> user.getNumberOfPost())
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
         return average;
     }
 }
