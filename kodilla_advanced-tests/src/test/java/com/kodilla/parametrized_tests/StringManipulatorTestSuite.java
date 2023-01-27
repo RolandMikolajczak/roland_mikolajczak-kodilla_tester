@@ -17,7 +17,7 @@ public class StringManipulatorTestSuite {
         assertEquals(expected, manipulator.getStringLengthWithoutSpaces(input));
     }
 
-    private static Stream<Arguments> shouldCalculateStringLengthWithoutSpaces() {
+    public static Stream<Arguments> shouldCalculateStringLengthWithoutSpaces() {
         return Stream.of(
                 Arguments.of("test", 4),
                 Arguments.of("OtHEr ", 5),
@@ -36,8 +36,8 @@ public class StringManipulatorTestSuite {
         assertEquals(expected,manipulator.reverseWithLowerCase(input));
     }
     @ParameterizedTest
-    @MethodSource(value = "provideStringsForTestingLenght")
-    public void shouldCaculateLenghtWithoutSpaces(String input, int expected){
+    @MethodSource(value = "shouldCalculateStringLengthWithoutSpaces")
+    public void shouldCalculateLengthWithoutSpaces(String input, int expected){
         assertEquals(expected,manipulator.getStringLengthWithoutSpaces(input));
     }
     @ParameterizedTest
