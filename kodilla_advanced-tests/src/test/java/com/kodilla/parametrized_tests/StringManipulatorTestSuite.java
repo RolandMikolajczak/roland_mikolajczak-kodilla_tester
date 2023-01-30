@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StringManipulatorTestSuite {
+
     @ParameterizedTest
     @MethodSource
     public void shouldCalculateStringLengthWithoutSpaces(String input, int expected) {
@@ -45,7 +46,6 @@ public class StringManipulatorTestSuite {
     public void shouldCountNumberOfCommas(String input, int expected) {
         assertEquals(expected, manipulator.countNumberOfCommas(input));
     }
-
 
 
 }
